@@ -25,7 +25,6 @@ println(regex.matches(input)) // false
 println(regex.containsMatchIn(input)) // true
 ```
 
-
 ## 2. ¿Para qué se usan?
 Las expresiones regulares tienen multitud de usos.
 
