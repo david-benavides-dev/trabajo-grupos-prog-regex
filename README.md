@@ -190,6 +190,21 @@ false
 
 ## 6. Desarrolla y explica una función de extensión que se llame filtrar para la clase List<String>. Esta función debe utilizar una expresión regular para filtrar los elementos de la lista. El resultado será una lista con los elementos que coincidan con el patrón que se pasará a dicha función.
 
+```kotlin
+fun List<String>.filtrar(patron: Regex): List<String> {
+    // * Lista para guardar los elementos que coinciden con el pattern.
+    val resultado = mutableListOf<String>()
+
+    for (elemento in this) {
+        // * Verifica si el elemento coincide con el patrón para añadirlo a la lista
+        if (patron.containsMatchIn(elemento)) {
+            resultado.add(elemento)
+        }
+    }
+
+    return resultado
+```
+
 ### Fuentes
 
 - **Documentación oficial de Kotlin**: [Kotlin Docs](https://kotlinlang.org/docs/home.html)
