@@ -127,4 +127,32 @@ Output
 H*l* 1D*WB
 ```
 
+Un ejemplo algo más complejo:
+```kotlin
+fun String.comprobarTexto(): Boolean {
+    // Patrón para validar que un texto tiene entre 1 y 5 caracteres y al menos uno de ellos es mayúscula.
+    // SOLO permite letras A-Z.
+    // https://regex101.com/
+    val regex = Regex("^(?=(.*[A-Z]))[A-Za-z]{1,5}$")
+    return this.matches(regex)
+}
+
+
+fun main() {
+    val textoValido = "AAacx"
+    println(textoValido.comprobarTexto())
+    
+    val textoInvalido = "1axcxd"
+    println(textoInvalido.comprobarTexto())
+}
+```
+
+### Fuentes
+
+- **Documentación oficial de Kotlin**: [Kotlin Docs](https://kotlinlang.org/docs/home.html)
+  
+- **Pruebas interactivas de expresiones regulares**: [Regex101](https://regex101.com/)
+  
+- **Referencia de Regex en Kotlin**: [Kotlin Regex API](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.text/-regex/) 
+
 ## 6. Desarrolla y explica una función de extensión que se llame filtrar para la clase List<String>. Esta función debe utilizar una expresión regular para filtrar los elementos de la lista. El resultado será una lista con los elementos que coincidan con el patrón que se pasará a dicha función.
