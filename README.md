@@ -1,7 +1,7 @@
 # Expresiones regulares + Funciones de Extensión
 
 ## 1. ¿Qué es una expresión regular?
-Una expresión regular (regular expression o regex) es una secuencia de carácteres que define un patrón de búsqueda, utilizada para encontrar, modificar, reemplazar, transformar u otros cadenas de texto según un patrón previamente definido; en resumen, sirve para manipular texto complejo de una manera muy sencilla.
+Una expresión regular (regular expression o regex) es una secuencia de carácteres que define un patrón de búsqueda, utilizada para encontrar, modificar, reemplazar y transformar (entre otros) cadenas de texto; en resumen, sirve para manipular texto complejo de una manera muy sencilla.
 
 Se utiliza haciendo uso del constructor de la clase `Regex` (clase que está disponible como parte de la biblioteca estándar de Kotlin desde su versión 1.0).
 
