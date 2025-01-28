@@ -41,6 +41,7 @@ Algunos de los más comunes:
 4. **Coincidir con un rango de caracteres**, buscando por ejemplo letras de A-Z o números de 0-9.
 5. **Reemplazar texto por otro** según el patrón definido.
 6. **Separar una cadena en partes** usando un delimitador definido por un patrón establecido.
+7. **Comprobar si una contraseña cumple con ciertos requisitos.**
 
 ## 3. Explica las expresiones regulares con un ejemplo práctico.
 ```kotlin
