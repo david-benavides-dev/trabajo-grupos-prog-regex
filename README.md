@@ -46,6 +46,8 @@ Algunos de los más comunes:
 ```kotlin
 fun buscarLetra(palabra: String, letra: Char): Boolean {
     // Creamos una expresión regular para buscar una letra en una palabra.
+    // NOTA: Los símbolos .* indican que puede haber cualquier cantidad de caracteres antes de la parte que estamos buscando, incluidos 0 caracteres.
+    // siendo . CUALQUIER CARACTER y * cero o más.
     val patronLetra = Regex(".*$letra.*")
     
     // True si se encuentra, False en el caso de no encontrarla.
@@ -110,7 +112,7 @@ fun String.reemplazarVocales(simbolo: String): String {
 
 
 fun main() {
-    // Definimos un texto de prueba (Hola 1DAWB)
+    // Definimos un texto de prueba
     val texto = "Hola 1DAWB"
 
     // Llamamos a la función de extensión reemplazarVocales y le pasamos el símbolo "*".
