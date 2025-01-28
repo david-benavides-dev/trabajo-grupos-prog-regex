@@ -160,4 +160,6 @@ false
   
 - **Pruebas interactivas de expresiones regulares**: [Regex101](https://regex101.com/)
   
-- **Referencia de Regex en Kotlin**: [Kotlin Regex API](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.text/-regex/) 
+- **Documentación oficial de Koltin sobre Regex**: [Kotlin Regex API](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.text/-regex/)
+
+- **Guia sobre Regex**: [Understanding Regex in Kotlin: A Comprehensive Guide](https://medium.com/@ramadan123sayed/understanding-regex-in-kotlin-a-comprehensive-guide-a5a55e069367)
