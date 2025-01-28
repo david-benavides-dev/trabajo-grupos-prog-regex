@@ -146,6 +146,13 @@ fun main() {
     println(textoInvalido.comprobarTexto())
 }
 ```
+Output
+```
+true
+false
+```
+
+## 6. Desarrolla y explica una función de extensión que se llame filtrar para la clase List<String>. Esta función debe utilizar una expresión regular para filtrar los elementos de la lista. El resultado será una lista con los elementos que coincidan con el patrón que se pasará a dicha función.
 
 ### Fuentes
 
@@ -154,5 +161,3 @@ fun main() {
 - **Pruebas interactivas de expresiones regulares**: [Regex101](https://regex101.com/)
   
 - **Referencia de Regex en Kotlin**: [Kotlin Regex API](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.text/-regex/) 
-
-## 6. Desarrolla y explica una función de extensión que se llame filtrar para la clase List<String>. Esta función debe utilizar una expresión regular para filtrar los elementos de la lista. El resultado será una lista con los elementos que coincidan con el patrón que se pasará a dicha función.
