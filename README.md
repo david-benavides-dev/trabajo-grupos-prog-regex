@@ -5,6 +5,12 @@ Una expresión regular (regular expression o regex) es una secuencia de carácte
 
 Se utiliza haciendo uso del constructor de la clase `Regex` (clase que está disponible como parte de la biblioteca estándar de Kotlin desde su versión 1.0).
 
+Algunos de los métodos que contiene la clase `Regex`:
+1. `matches`: Comprueba si toda la cadena coincide exactamente con el patrón dado.
+2. `containsMatchIn`: Comprueba si el patrón está presente en cualquier parte de la cadena.
+3. `split`: Divide la cadena en una lista de subcadenas usando el patrón como delimitador.
+4. `replace`: Reemplaza todas las ocurrencias en la cadena por el patrón.
+
 Un ejemplo básico de uso utilizando los métodos `matches` y `containsMatchIn`:
 ```kotlin
 // * Creamos una expresión regular con el contenido "Hola" como patrón.
