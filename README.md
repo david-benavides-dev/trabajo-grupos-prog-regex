@@ -75,13 +75,14 @@ Otro ejemplo, esta vez para validar un DNI:
 ```kotlin
 fun main() {
     fun validarDni(dni: String): Boolean {
-        val patronDni = Regex("^[0-9]{8}[A-Z]\$")
+        // * Patrón que comprueba si el String empieza con 8 números y acaba en una letra entre A-Z.
+        val patronDni = Regex("^[0-9]{8}[A-Z]$")
         return dni.matches(patronDni)
     }
 
-    val dniValido = "11847219Z"
-
     val dniInvalido = "11938192g"
+
+    val dniValido = "11847219Z"
 
     println(validarDni((dniInvalido)))
 
