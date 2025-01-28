@@ -1,4 +1,4 @@
-<p align="center"><img alt="Regex" src="./assets/banner.png"/></p>
+<p align="center"><img alt="Regex" src="./assets/readme-header.png"/></p>
 
 # Expresiones regulares + Funciones de Extensión
 
