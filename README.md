@@ -1,3 +1,5 @@
+<p align="center"><img width="80%" alt="Regex" src="./assets/banner.png"/></p>
+
 # Expresiones regulares + Funciones de Extensión
 
 ## 1. ¿Qué es una expresión regular?
