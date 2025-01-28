@@ -44,6 +44,8 @@ Algunos de los más comunes:
 7. **Comprobar si una contraseña cumple con ciertos requisitos.**
 
 ## 3. Explica las expresiones regulares con un ejemplo práctico.
+
+Ejemplo de función para buscar una letra en una palabra:
 ```kotlin
 fun buscarLetra(palabra: String, letra: Char): Boolean {
     // Creamos una expresión regular para buscar una letra en una palabra.
@@ -64,6 +66,36 @@ fun main() {
 }
 ```
 
+Output:
+```
+La letra o se encuentra en la palabra.
+```
+
+Otro ejemplo, esta vez para validar un DNI:
+```kotlin
+fun main() {
+    fun validarDni(dni: String): Boolean {
+        val patronDni = Regex("^[0-9]{8}[A-Z]\$")
+        return dni.matches(patronDni)
+    }
+
+    val dniValido = "11847219Z"
+
+    val dniInvalido = "11938192g"
+
+    println(validarDni((dniInvalido)))
+
+    println(validarDni(dniValido))
+}
+
+```
+
+Output:
+```
+false
+true
+```
+
 ## 4. Localiza en la práctica del Ahorcado dónde se utiliza una expresión regular. Analiza y explica el código en detalle.
 
 ## 5. ¿Qué es una función de extensión?
@@ -81,6 +113,7 @@ fun main() {
     println("Prueba ".mostrarTresVeces())
 }
 ```
+
 Output:
 ```
 Prueba Prueba Prueba
@@ -97,8 +130,8 @@ fun String.saludar(): String {
 fun main() {
     println("Nombre".saludar())
 }
-
 ```
+
 Output:
 ```
 ¡Nombre te saluda!
@@ -122,6 +155,7 @@ fun main() {
     println(resultado)
 }
 ```
+
 Output
 ```
 H*l* 1D*WB
@@ -146,6 +180,7 @@ fun main() {
     println(textoInvalido.comprobarTexto())
 }
 ```
+
 Output
 ```
 true
