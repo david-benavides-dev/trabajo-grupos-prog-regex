@@ -7,8 +7,7 @@ Se utiliza haciendo uso del constructor de la clase `Regex` (clase que está dis
 
 Un ejemplo básico de uso utilizando los métodos `matches` y `containsMatchIn`:
 ```kotlin
-// * Creamos una variable inmutable llamada 'regex' que contiene 
-//   el patrón de búsqueda (en este ejemplo, la palabra "Hola").
+// * Creamos una expresión regular con el contenido "Hola" como patrón.
 val regex = Regex("Hola")
 
 // * Creamos una cadena de texto que usaremos como entrada para el ejemplo.
@@ -47,6 +46,7 @@ fun buscarLetra(palabra: String, letra: Char): Boolean {
     return patronLetra.matches(palabra)
 }
 
+
 fun main() {
     val palabra = "hola"
     val letra = 'o'
@@ -58,5 +58,64 @@ fun main() {
 ## 4. Localiza en la práctica del Ahorcado dónde se utiliza una expresión regular. Analiza y explica el código en detalle.
 
 ## 5. ¿Qué es una función de extensión?
+Una **función de extensión** es una manera de añadir nuevas funcionalidades a clases que ya existen sin tener que modificar su código. Sería como "extender" la funcionalidad de una clase con nuevas funciones.
+Por ejemplo, podemos crear funcionalidades para la clase `String`:
+
+Ejemplo de función de extensión que muestra un `String` tres veces por consola:
+```kotlin
+fun String.mostrarTresVeces(): String {
+    return this.repeat(3)
+}
+
+
+fun main() {
+    println("Prueba ".mostrarTresVeces())
+}
+```
+Output:
+```
+Prueba Prueba Prueba
+```
+
+Ejemplo de función de extensión que permite a 'Nombre' (o otra palabra que se nos ocurra) saludar:
+```kotlin
+// * Añadimos la función saludar a la clase String, que retorna Hola junto al String al que apliquemos la función.
+fun String.saludar(): String {
+    return "¡$this te saluda!"
+}
+
+
+fun main() {
+    println("Nombre".saludar())
+}
+
+```
+Output:
+```
+¡Nombre te saluda!
+```
+
+Ejemplo utilizando `Regex`:
+```kotlin
+// * Función de extensión para reemplazar las vocales por un símbolo dado.
+fun String.reemplazarVocales(simbolo: String): String {
+    return this.replace(Regex("[aeiouAEIOU]"), simbolo)
+}
+
+
+fun main() {
+    // Definimos un texto de prueba (Hola 1DAWB)
+    val texto = "Hola 1DAWB"
+
+    // Llamamos a la función de extensión reemplazarVocales y le pasamos el símbolo "*".
+    val resultado = texto.reemplazarVocales("*")
+
+    println(resultado)
+}
+```
+Output
+```
+H*l* 1D*WB
+```
 
 ## 6. Desarrolla y explica una función de extensión que se llame filtrar para la clase List<String>. Esta función debe utilizar una expresión regular para filtrar los elementos de la lista. El resultado será una lista con los elementos que coincidan con el patrón que se pasará a dicha función.
