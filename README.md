@@ -225,7 +225,7 @@ Un ejemplo algo más complejo:
 ```kotlin
 fun String.comprobarTexto(): Boolean {
     // Patrón para validar que un texto tiene entre 1 y 5 caracteres y al menos uno de ellos es mayúscula.
-    // SOLO permite letras A-Z.
+    // SOLO permite letras de la A a la Z (mayúsculas y minúsculas).
     // https://regex101.com/
     val regex = Regex("^(?=(.*[A-Z]))[A-Za-z]{1,5}$")
     return this.matches(regex)
